@@ -29,7 +29,7 @@ app.all('*', function (req, res, next) {
         request({ url: targetURL + req.url, method: req.method, json: req.body, headers: {'Ocp-Apim-Subscription-Key': req.header('Ocp-Apim-Subscription-Key')} },
             function (error, response, body) {
                 if (error) {
-                    console.log(error);
+                    console.error(error);
                     console.error('error: ' + response.statusCode)
                 }
 //                console.log(body);
