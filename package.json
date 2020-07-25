@@ -12,6 +12,9 @@
   },
   "author": "Rohit Kumar Shaw",
   "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
   "bugs": {
     "url": "https://github.com/rohit90314/proxy-server/issues"
   },
