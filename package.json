@@ -4,7 +4,8 @@
   "description": "This is a simple implementation of proxy-server using node js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/rohit90314/proxy-server/issues"
   },
-  "homepage": "https://github.com/rohit90314/proxy-server#readme"
+  "homepage": "https://github.com/rohit90314/proxy-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
 }
