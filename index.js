@@ -16,9 +16,13 @@ app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
     res.header("Access-Control-Allow-Headers", req.header('access-control-request-headers'));
-    let headersToSend = {'Ocp-Apim-Subscription-Key': req.header('Ocp-Apim-Subscription-Key')};
+    let headersToSend = {
+        'Ocp-Apim-Subscription-Key': req.header('Ocp-Apim-Subscription-Key'),
+    };
     if(req.url==="/drxauth/user/reset-rm"){
         headersToSend['source']="rm-ui"
+    }else{
+        headersToSend['Source']=req.header("Source")
     }
     
     if (req.method === 'OPTIONS') {
