@@ -22,8 +22,8 @@ app.all('*', function (req, res, next) {
     if(req.url==="/drxauth/user/reset-rm"){
         headersToSend['source']="rm-ui"
     }else{
-        // headersToSend['Source']=req.header("Source")
-        headersToSend=req.headers
+        headersToSend['Source']=req.header("Source")
+        // headersToSend=req.headers
     }
     
     if (req.method === 'OPTIONS') {
